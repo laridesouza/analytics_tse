@@ -113,13 +113,6 @@ if __name__ == "__main__":
     parser.add_argument("--intervalo", type=int, default=2, help="Intervalo entre os anos a serem baixados")
     args = parser.parse_args()
 
-
     downloader = DownloadTSE()
-
     downloader.download_anos(
-        range(
-            args.inicio,
-            args.fim + 1,
-            args.intervalo
-            )
-)   
+        range(args.inicio, args.fim + 1, args.intervalo))   
